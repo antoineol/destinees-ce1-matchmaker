@@ -1,8 +1,14 @@
 import { Fragment, useState } from 'react';
 
 import { Card } from './Card';
+import type { Training } from './trainings';
 
-export function TrainingListPage(props) {
+interface Props {
+  allTrainings: Training[];
+  filteredTrainings: Training[];
+}
+
+export function TrainingListPage(props: Props) {
   const { filteredTrainings } = props;
   const [applyMatch, setApplyMatch] = useState(false);
   const allTrainings = props.allTrainings;

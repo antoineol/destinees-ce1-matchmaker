@@ -1,7 +1,7 @@
 'use client';
 
-import { NoSSR } from '@/app/utils/NoSSR';
-import { useIsAuthenticated } from '@/app/utils/auth';
+import { NoSSR } from '@/app/admin/utils/NoSSR';
+import { useIsAuthenticated } from '@/app/admin/utils/auth';
 import React from 'react';
 
 const UsersPage = () => {

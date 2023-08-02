@@ -1,6 +1,11 @@
 import { Fragment } from 'react';
+import type { Training } from './trainings';
 
-export function Card(props) {
+interface Props {
+  training: Training;
+}
+
+export function Card(props: Props) {
   const training = props.training;
 
   return (

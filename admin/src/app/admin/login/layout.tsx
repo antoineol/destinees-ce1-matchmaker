@@ -11,7 +11,7 @@ export default function Layout({ children }: { children: ReactNode }) {
   const isAuth = useIsAuthenticated();
   useEffect(() => {
     if (isAuth) {
-      replace('/dashboard');
+      replace('/admin/dashboard');
     }
   }, [isAuth, replace]);
 
