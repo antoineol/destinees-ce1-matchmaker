@@ -1,6 +1,5 @@
 {
   "printWidth": 100,
-  "endOfLine": "lf",
   "tabWidth": 2,
   "tabs": false,
   "semi": true,

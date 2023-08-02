@@ -63,8 +63,6 @@ it('test_4_color_few_seats', () => {
   const allTrainings = clone(allTrainingsRaw);
   prepareTrainings(allTrainings);
   for (const training of allTrainings) {
-    console.log({ fewSeatsLeft: training.fewSeatsLeft, seats: training.seats });
-
     if (training.seats <= 10) {
       expect(training.fewSeatsLeft).toBe(true);
     }
