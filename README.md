@@ -4,8 +4,8 @@ This repository includes the new MatchMaker feature Acme has developped to help 
 
 ## Requirements
 
-- Node.js version >= 18
-- VSCode: this is the IDE we use at Acme for coding.
+- Node.js version >= 20
+- VSCode: this is the IDE we use at Acme for coding. The project contains VSCode-specific configuration.
 - yarn - from a terminal: `npm install -g yarn`
 - git
 
@@ -53,6 +53,8 @@ yarn test
 ```
 
 Optionally, you can use a VSCode plugin like Jest Runner to make running tests easier, especially if you want to run only some specific tests, instead of all tests.
+
+Note: we could also add a watch command to let the tests run in background while we develop. Feel free to add the script or ask your tech lead to get help on that.
 
 ## Deployment
 
