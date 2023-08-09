@@ -16,8 +16,7 @@ This repository includes the MatchMaker admin app to manage users and partners f
 To access the production admin:
 
 URL: https://acme.com/admin
-email: admin@acme.com
-password: j2b9SY_5DQVb!8hnKN4&Mp$WGdUtSB
+Credentials have been moved to LastPass. Please request access from your manager.
 
 ### To run from your computer
 
