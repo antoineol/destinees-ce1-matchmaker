@@ -12,7 +12,7 @@ const LoginPage = () => {
 
   const handleLogin = (e: FormEvent) => {
     e.preventDefault();
-    if (username === 'admin@destinees.co' && password === 'j2b9SY_5DQVb!8hnKN4&Mp$WGdUtSB') {
+    if (username === 'admin@acme.com' && password === 'j2b9SY_5DQVb!8hnKN4&Mp$WGdUtSB') {
       login(); // Call the login method
     } else {
       alert('Invalid credentials');

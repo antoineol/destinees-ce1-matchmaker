@@ -3,7 +3,7 @@
 import { NoSSR } from '@/app/admin/utils/NoSSR';
 import { useIsAuthenticated } from '@/app/admin/utils/auth';
 import type { PropsWithChildren } from 'react';
-import React, { useCallback, useMemo, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import type { User } from './utils';
 import { users, normalizeSearchTerm, normalizeUserFields } from './utils';
 import { useRouter } from 'next/navigation';
@@ -11,6 +11,17 @@ import { useRouter } from 'next/navigation';
 const UsersPage = () => {
   const isAuth = useIsAuthenticated();
   const [searchTerm, setSearchTerm] = useState('');
+
+  useEffect(() => {
+    if (isAuth) {
+      const componentRenderedEvent = {
+        type: 'viewUsers',
+      };
+
+      // Tells the parent app that the users page has been visited with permissions.
+      window.parent.postMessage(componentRenderedEvent, '*');
+    }
+  }, [isAuth]);
 
   const filteredUsers = useMemo(
     () =>
