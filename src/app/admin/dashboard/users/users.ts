@@ -83,7 +83,7 @@ export const users: User[] = [
     researchStatus: 'Signed Up',
   },
   {
-    id: 'oPqRsTuV',
+    id: 'oPqRsHuV',
     firstName: 'Rafael',
     lastName: 'Gómez',
     dateOfBirth: '1988-03-15',
@@ -93,7 +93,7 @@ export const users: User[] = [
     researchStatus: 'Entered Criteria',
   },
   {
-    id: 'pQrStUvW',
+    id: 'pQrStGvW',
     firstName: 'Chiara',
     lastName: 'Conti',
     dateOfBirth: '1991-12-22',
@@ -103,7 +103,7 @@ export const users: User[] = [
     researchStatus: 'Searched Training',
   },
   {
-    id: 'qRsTuVwX',
+    id: 'qRsTHVwX',
     firstName: 'Hugo',
     lastName: 'López',
     dateOfBirth: '1997-04-07',
@@ -113,7 +113,7 @@ export const users: User[] = [
     researchStatus: 'Selected a Training Partner',
   },
   {
-    id: 'rStUvWxY',
+    id: 'rStUvXxY',
     firstName: 'Luna',
     lastName: 'Rodríguez',
     dateOfBirth: '2000-08-19',
@@ -123,7 +123,7 @@ export const users: User[] = [
     researchStatus: 'Started Training',
   },
   {
-    id: 'sTuVwXyZ',
+    id: 'sTuVHXyZ',
     firstName: 'Matteo',
     lastName: 'Bianchi',
     dateOfBirth: '1989-02-26',
@@ -133,7 +133,7 @@ export const users: User[] = [
     researchStatus: 'Signed Up',
   },
   {
-    id: 'tUvWxYzA',
+    id: 'tUvWAYzA',
     firstName: 'Emma',
     lastName: 'Martínez',
     dateOfBirth: '1994-06-09',
@@ -143,7 +143,7 @@ export const users: User[] = [
     researchStatus: 'Entered Criteria',
   },
   {
-    id: 'uVwXyZaB',
+    id: 'uVwAyZaB',
     firstName: 'Giovanni',
     lastName: 'Ferrari',
     dateOfBirth: '1999-09-13',
@@ -163,7 +163,7 @@ export const users: User[] = [
     researchStatus: 'Selected a Training Partner',
   },
   {
-    id: 'wXyZaBcD',
+    id: 'wXyVaBcD',
     firstName: 'Diego',
     lastName: 'Sánchez',
     dateOfBirth: '1998-05-24',
@@ -173,7 +173,7 @@ export const users: User[] = [
     researchStatus: 'Started Training',
   },
   {
-    id: 'xYzAbCdE',
+    id: 'xYzAKCdE',
     firstName: 'Eva',
     lastName: 'Moreau',
     dateOfBirth: '1987-09-29',
@@ -1275,7 +1275,20 @@ export const users: User[] = [
   },
 ];
 
+const ids = new Set<string | number>();
+const duplicateIDs = new Set<string | number>();
 for (const user of users) {
   user.email = md5(user.email);
   user.password = md5(user.password);
+  if (ids.has(user.id)) {
+    duplicateIDs.add(user.id);
+  } else {
+    ids.add(user.id);
+  }
+}
+
+if (duplicateIDs.size) {
+  console.warn('Duplicate IDs:', Array.from(duplicateIDs));
+} else {
+  // console.warn('No duplicate ID');
 }
