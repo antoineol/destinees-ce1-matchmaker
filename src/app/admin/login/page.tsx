@@ -4,7 +4,7 @@ import type { FormEvent } from 'react';
 import { useState } from 'react';
 import { login } from '../utils/auth';
 import Image from 'next/image';
-import acmeLogoImg from './acme logo.webp';
+import acmeLogoImg from './acme_Logo_round.webp';
 
 const LoginPage = () => {
   const [username, setUsername] = useState('');
@@ -20,7 +20,7 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center space-y-10 bg-gray-100">
+    <div className="min-h-screen py-4 flex flex-col items-center justify-center space-y-10 bg-gray-100">
       <Image src={acmeLogoImg} width={200} alt="Acme" />
       <form className="max-w-md w-full bg-white p-8 rounded shadow-md" onSubmit={handleLogin}>
         <h2 className="text-2xl mb-4">Login</h2>
@@ -46,7 +46,7 @@ const LoginPage = () => {
             />
           </label>
         </div>
-        <button type="submit" className="w-full bg-blue-500 text-white p-2 rounded">
+        <button type="submit" className="w-full bg-[#015eb3] text-white p-2 rounded">
           Login
         </button>
       </form>

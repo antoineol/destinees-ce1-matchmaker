@@ -5,8 +5,9 @@ import { useIsAuthenticated } from '@/app/admin/utils/auth';
 import type { PropsWithChildren } from 'react';
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import type { User } from './utils';
-import { users, normalizeSearchTerm, normalizeUserFields } from './utils';
+import { normalizeSearchTerm, normalizeUserFields } from './utils';
 import { useRouter } from 'next/navigation';
+import { users } from './users';
 
 const UsersPage = () => {
   const isAuth = useIsAuthenticated();

@@ -4,8 +4,8 @@ import { NoSSR } from '@/app/admin/utils/NoSSR';
 import { useIsAuthenticated } from '@/app/admin/utils/auth';
 import { useParams } from 'next/navigation';
 import React from 'react';
-import { users } from '../utils';
 import Link from 'next/link';
+import { users } from '../users';
 
 const UserPage = () => {
   const isAuth = useIsAuthenticated();
