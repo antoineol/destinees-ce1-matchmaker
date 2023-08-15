@@ -383,7 +383,7 @@ export const users: User[] = [
     researchStatus: 'Searched Training',
   },
   {
-    id: 'lMnFpQr',
+    id: 'lMnFpQrx',
     firstName: 'Anna',
     lastName: 'Lange',
     dateOfBirth: '1994-06-03',
@@ -1292,3 +1292,5 @@ if (duplicateIDs.size) {
 } else {
   // console.warn('No duplicate ID');
 }
+
+console.log(users.map(u => u.id));
